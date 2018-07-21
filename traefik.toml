@@ -1,3 +1,4 @@
+logLevel = "DEBUG"
 # defaultEntryPoints must be at the top because it should not be in any table below
 defaultEntryPoints = ["http", "https"]
 #defaultEntryPoints = ["http", "https"]
@@ -19,6 +20,7 @@ entryPoint = "https"
 [entryPoints.https]
 address = ":443"
 
+
 [entryPoints.https.tls]
 
 # Enable ACME (Let's Encrypt): automatic SSL
@@ -34,7 +36,7 @@ OnHostRule = true
 entryPoint = "http"
 
 [acme.dnsChallenge]
-provider="digitalocean"
+provider="godaddy"
 delayBeforeCheck = 0 
 
 [docker]

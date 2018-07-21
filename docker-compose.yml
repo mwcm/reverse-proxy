@@ -5,7 +5,8 @@ services:
     build: .
     command: --logLevel=DEBUG
     environment:
-      DO_AUTH_TOKEN: "${DO_AUTH_TOKEN}"
+      GODADDY_API_KEY: "${GODADDY_API_KEY}"
+      GODADDY_API_SECRET: "${GODADDY_API_SECRET}"
     ports:
       - "80:80"
       - "443:443"
