@@ -31,6 +31,10 @@ storage = "acme.json"
 entryPoint = "https"
 onDemand = false
 OnHostRule = true
+[[acme.domains]]
+   main = "mwcm.ca"
+[[acme.domains]]
+   main = "*.mwcm.ca"
 
 [acme.httpChallenge]
 entryPoint = "http"
