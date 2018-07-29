@@ -1,9 +1,7 @@
 version: '3.2'
 
 services:
-  reverseproxy:
-    hostname: reverseproxy
-    container_name: reverseproxy
+  traefik:
     build: .
     command: --logLevel=DEBUG
     restart: always
@@ -19,7 +17,7 @@ services:
       GODADDY_API_SECRET: "${GODADDY_API_SECRET}"
     labels:
       - "traefik.enable=true" 
-      - "traefik.backend=reverseproxy"
+      - "traefik.backend=traefik"
       - "traefik.frontend.rule=Host:traefik.mwcm.ca"
       - "traefik.port=8080"
       - "traefik.docker.network=reverseproxy_reverseproxy"
