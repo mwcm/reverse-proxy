@@ -28,6 +28,26 @@ services:
       - all
     cap_add:
       - net_bind_service
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/docker/portainer/data:/data
+      - /root/docker/shared:/shared
+    environment:
+      - TZ="America/New_York"
+    networks:
+      - reverseproxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=portainer"
+      - "traefik.frontend.rule=Host:portainer.mwcm.ca"  
+      - "traefik.port=9000"
+      - "traefik.docker.network=reverseproxy_reverseproxy"
 
 networks:
   reverseproxy:
