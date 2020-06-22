@@ -1,3 +1,3 @@
 ## What?
 
-This is a fork of [https://github.com/containerize-my-server/reverse-proxy].  Used to version track 'my' (minorly)modified implementation use to run [mwcm.ca](http://mwcm.ca:8080).
+fork of https://github.com/containerize-my-server/reverse-proxy used to version track my implementation, used to run [mwcm.ca](mwcm.ca).
