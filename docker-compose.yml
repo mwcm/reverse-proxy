@@ -13,8 +13,8 @@ services:
       - "443:443"
       - "8080:8080"
     environment:
-      GODADDY_API_KEY: "${GODADDY_API_KEY}"
-      GODADDY_API_SECRET: "${GODADDY_API_SECRET}"
+      NAMECHEAP_API_KEY: "${NAMECHEAP_API_KEY}"
+      NAMECHEAP_API_USER: "${NAMECHEAP_API_USER}"
     labels:
       - "traefik.enable=true" 
       - "traefik.backend=traefik"

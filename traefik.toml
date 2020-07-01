@@ -23,7 +23,7 @@ address = ":443"
 
 # Enable ACME (Let's Encrypt): automatic SSL
 [acme]
-caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+caServer = "https://acme-v02.api.letsencrypt.org/directory"
 email = "mwcmdo@gmail.com"
 storage = "/etc/traefik/acme/acme.json"
 #storage = 'acme.json'
